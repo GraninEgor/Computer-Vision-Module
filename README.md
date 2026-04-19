@@ -2,8 +2,8 @@
 
 ## Author
 
-**Full Name:** Your Name Here
-**Group:** Your Group Here
+**Full Name:** Гранин Егор Вадимович
+**Group:** 972401
 
 ---
 
