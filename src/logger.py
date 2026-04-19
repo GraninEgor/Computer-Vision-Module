@@ -3,19 +3,18 @@ import os
 
 LOG_PATH = "data/log_file.log"
 
-def setup_logger():
+def get_logger():
     os.makedirs("data", exist_ok=True)
 
-    logger = logging.getLogger("app_logger")
+    logger = logging.getLogger("app")
     logger.setLevel(logging.INFO)
 
     if not logger.handlers:
         file_handler = logging.FileHandler(LOG_PATH)
         formatter = logging.Formatter(
-            "%(asctime)s - %(levelname)s - %(message)s"
+            "%(asctime)s | %(levelname)s | %(message)s"
         )
         file_handler.setFormatter(formatter)
-
         logger.addHandler(file_handler)
 
     return logger
