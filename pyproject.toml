@@ -1,17 +1,20 @@
-[project]
-name = "Compueter-Vision-Model"
+[tool.poetry]
+name = "computer-vision-model"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "me",email = "my@gmail.com"}
-]
-readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "ultralytics (>=8.4.39,<9.0.0)"
+description = "License Plate Detection using YOLO"
+authors = ["me <my@gmail.com>"]
+
+packages = [
+    { include = "computer_vision_model", from = "src" }
 ]
 
+[tool.poetry.dependencies]
+python = "^3.10"
+ultralytics = "^8.4.39"
+opencv-python = "^4.9.0"
+numpy = "^1.26.0"
+clearml = "^1.14.0"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
